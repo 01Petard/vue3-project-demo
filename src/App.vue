@@ -12,10 +12,11 @@
       <router-link to="/home" class="nav-link">首页</router-link>
       <router-link to="/news" class="nav-link">新闻</router-link>
       <router-link to="/about" class="nav-link">关于</router-link>
-      <router-link :to="{name:'人'}" class="nav-link">人</router-link>
-      <router-link :to="{path:'/dog'}" class="nav-link">狗</router-link>
+      <router-link :to="{name:'人'}" class="nav-link">人的信息</router-link>
+      <router-link :to="{path:'/dog'}" class="nav-link">狗图片</router-link>
       <router-link to="/sum" class="nav-link">求和</router-link>
       <router-link to="/sweet" class="nav-link">土味情话</router-link>
+      <router-link to="/fuzi" class="nav-link">组件通信emitter</router-link>
     </nav>
     <main class="content">
       <router-view></router-view>

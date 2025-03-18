@@ -33,6 +33,7 @@ const sweetStore = useSweetStore();
     <ul v-if="sweetStore.sweetTalk.length > 0">
       <li v-for="talk in sweetStore.sweetTalk" :key="talk">{{ talk }}</li>
     </ul>
+    <br>
     <button @click="sweetStore.clearSweetTalk()">清空</button>
   </div>
 </template>

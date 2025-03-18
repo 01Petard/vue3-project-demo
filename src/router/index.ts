@@ -8,6 +8,7 @@ import Dog from "@/views/Dog.vue";
 import Detail from "@/components/Detail.vue";
 import Sum from "@/views/Sum.vue";
 import SweetTalk from "@/views/SweetTalk.vue";
+import FuZi from "@/views/FuZi.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -52,6 +53,10 @@ const router = createRouter({
         {
             path: '/sweet',
             component: SweetTalk
+        },
+        {
+            path: '/fuzi',
+            component: FuZi
         },
     ]
 });
