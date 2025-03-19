@@ -3,17 +3,17 @@ import mitt from "mitt";
 
 const emitter = mitt()
 
-emitter.on('test1', (data) => {
+emitter.on('data1', (data) => {
     console.log(data)
 })
-emitter.on('test2', (data) => {
+emitter.on('data2', (data) => {
     console.log(data)
 })
 
 setInterval(() => {
     // 触发监听器
-    emitter.emit('test1', 'data1')
-    emitter.emit('test2', 'data2')
+    emitter.emit('data1', '数据1')
+    emitter.emit('data2', '数据2')
 },2000)
 
 setTimeout(() => {
