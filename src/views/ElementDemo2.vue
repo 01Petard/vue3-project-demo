@@ -3,18 +3,8 @@ import {computed, ref} from 'vue'
 import {ElMessage, ElMessageBox} from 'element-plus'
 import {Delete, Edit} from '@element-plus/icons-vue'
 import {handleCurrentChange} from "element-plus/es/components/tree/src/model/util";
+import type {Student} from "@/types";
 
-// 模拟数据
-interface Student {
-  studentId: string
-  name: string
-  age: number
-  gender: 'M' | 'F'
-  className: string
-  enrollDate: Date
-  lastLogin: Date
-  status: 'active' | 'inactive' | 'pending'
-}
 
 const students = ref<Student[]>([
   {
@@ -196,17 +186,31 @@ const searchForm = ref({
 })
 
 // 状态映射
-const statusColor = {
+// const statusColor = {
+//   active: 'success',
+//   inactive: 'danger',
+//   pending: 'warning'
+// } as const
+//
+// const statusText = {
+//   active: '正常',
+//   inactive: '禁用',
+//   pending: '待审核'
+// }
+
+// 在 script setup 中定义类型
+const statusColor: Record<'active' | 'inactive' | 'pending', string> = {
   active: 'success',
   inactive: 'danger',
-  pending: 'warning'
-} as const
+  pending: 'warning',
+};
 
-const statusText = {
+const statusText: Record<'active' | 'inactive' | 'pending', string> = {
   active: '正常',
   inactive: '禁用',
-  pending: '待审核'
-}
+  pending: '待审核',
+};
+
 
 // 分页参数
 const pagination = ref({
@@ -368,8 +372,8 @@ const handleDelete = (row: Student) => {
           width="100"
       >
         <template #default="scope">
-          <el-tag :type="statusColor[scope.row.status]">
-            {{ statusText[scope.row.status] }}
+          <el-tag :type="statusColor[scope.row.status as keyof typeof statusColor]">
+            {{ statusText[scope.row.status as keyof typeof statusText] }}
           </el-tag>
         </template>
       </el-table-column>
