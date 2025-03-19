@@ -120,7 +120,7 @@ const handleLogout = () => {
       <!-- 主内容区域 -->
       <el-container class="content-main">
         <!-- 侧边栏区域 -->
-        <el-aside width="240px" style="background: #f0f2f5; padding: 20px">
+        <el-aside class="aside-menu">
           <el-menu
               router
               :default-active="$route.path"
@@ -261,10 +261,17 @@ const handleLogout = () => {
   height: 100vh;
 }
 
+.aside-menu {
+  width: 200px;
+  background: #f0f2f5;
+  padding: 10px;
+}
+
 .side-menu {
   height: 100%;
   border-right: none;
 }
+
 
 </style>
 
