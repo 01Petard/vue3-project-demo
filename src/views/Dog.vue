@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useDog from "@/hooks/useDog.ts";
+import useDog from "@/api/useDog.ts";
 
 const {dogList, getDog} = useDog();
 

@@ -161,8 +161,12 @@ const handleLogout = () => {
               <span>组件通信</span>
             </el-menu-item>
 
-            <el-menu-item index="/ele">
-              <span>Element Demo</span>
+            <el-menu-item index="/demo1">
+              <span>Element Demo1</span>
+            </el-menu-item>
+
+            <el-menu-item index="/demo2">
+              <span>Element Demo2</span>
             </el-menu-item>
 
 
@@ -181,16 +185,6 @@ const handleLogout = () => {
 
 
 <style scoped>
-.main-container {
-  flex: 1;
-  height: calc(100vh - 64px); /* 减去header高度 */
-}
-
-.side-aside {
-  background: #f0f2f5;
-  padding: 20px;
-  height: 100%;
-}
 
 .content-main {
   padding: 20px;

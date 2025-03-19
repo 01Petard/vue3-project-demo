@@ -8,7 +8,8 @@ import Dog from "@/views/Dog.vue";
 import Sum from "@/views/Sum.vue";
 import SweetTalk from "@/views/SweetTalk.vue";
 import FuZi from "@/views/FuZi.vue";
-import ElementDemo from "@/views/ElementDemo.vue";
+import ElementDemo1 from "@/views/ElementDemo1.vue";
+import ElementDemo2 from "@/views/ElementDemo2.vue";
 
 const routes = [
     {
@@ -48,8 +49,12 @@ const routes = [
         component: FuZi
     },
     {
-        path: '/ele',
-        component: ElementDemo
+        path: '/demo1',
+        component: ElementDemo1
+    },
+    {
+        path: '/demo2',
+        component: ElementDemo2
     }
 ]
 
